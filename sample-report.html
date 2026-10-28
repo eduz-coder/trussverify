@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sample report — Maple Street Residence — TrussVerify</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <svg width="38" height="30" viewBox="0 0 38 30" aria-hidden="true"><path d="M2 26 L19 4 L36 26" fill="none" stroke="#f5a623" stroke-width="3"/><path d="M8 26 L19 12 L30 26 M19 12 L19 26 M8 26 L30 26" fill="none" stroke="#ffffff" stroke-width="2"/></svg>
+      <span>TrussVerify<span class="brand-sub">Truss package review</span></span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="upload.html">Upload</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="sample-report.html" class="active">Sample report</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="demo-note"><strong>Sample report — fictional project.</strong> Names, dimensions, and findings on this page were created to show the reporting format. No real job is shown here.</div>
+
+  <h2>Review summary — Maple Street Residence</h2>
+  <p>
+    <strong>Job code:</strong> MS-101 &nbsp;·&nbsp;
+    <strong>Package:</strong> Roof truss layout and profiles &nbsp;·&nbsp;
+    <strong>Stage:</strong> QUOTE
+  </p>
+  <p><strong>Recommendation: Do not release yet</strong> — two high-priority items below affect the design and the price.</p>
+  <p class="small"><strong>Sheets reviewed:</strong> A1–A4, S1.0–S2.1 (fictional demo set). <strong>Configuration:</strong> example plant configuration — no real plant standards or inventory.</p>
+
+  <div class="finding high">
+    <span class="sev high">1 · High</span>
+    <h3>Overhang does not match the plan</h3>
+    <p>The structural eave detail dimensions the truss tail to 1'-3" from the wall reference line. Representative profiles show a 1'-5" tail — a difference of 2" on every affected truss.</p>
+    <p><strong>Action:</strong> Confirm the plan reference, correct the affected trusses, and rerun the profiles.</p>
+  </div>
+
+  <div class="finding high">
+    <span class="sev high">2 · High</span>
+    <h3>Plan-required special truss is shown as a common truss</h3>
+    <p>Sheet S2.0 and its referenced detail call for a spanning gable truss at the labeled shear wall, including specified sheathing and holdown requirements. The layout label at that location corresponds to a common truss profile.</p>
+    <p><strong>Action:</strong> Change the truss type and apply the schedule and detail requirements before release.</p>
+  </div>
+
+  <div class="finding medium">
+    <span class="sev medium">3 · Medium</span>
+    <h3>Girder bearing callout is missing</h3>
+    <p>A girder profile reports a maximum gravity reaction of 9,840 lb at its left bearing. No matching reaction callout was found at that bearing on the layout.</p>
+    <p><strong>Action:</strong> Add the rounded-up reaction at the correct bearing and verify the support below.</p>
+  </div>
+
+  <div class="finding confirm">
+    <span class="sev confirm">4 · Confirm</span>
+    <h3>Connector demand exceeds the configured example inventory</h3>
+    <p>A supported truss reaction exceeds the verified capacity entered for the stocked example connector under the applicable load-duration case. The physical fit at that location also requires confirmation.</p>
+    <p><strong>Action:</strong> Select a manufacturer-approved connector using the plant's current catalog data, or place a special order. Do not release with the example connector.</p>
+  </div>
+
+  <div class="finding medium">
+    <span class="sev medium">5 · Medium</span>
+    <h3>Floor deflection is outside the configured limit</h3>
+    <p>One fictional floor profile reports live-load deflection beyond the limit set in the example plant configuration, although the design software reported the truss as passing under its own default settings.</p>
+    <p><strong>Action:</strong> Increase depth, reduce spacing, revise chord specification, or use another design option approved by the designer, then rerun.</p>
+  </div>
+
+  <h2>Items verified — matches the plans</h2>
+  <div class="card">
+    <ul>
+      <li>Building overall dimensions match the architectural plan.</li>
+      <li>Main roof pitch matches the elevations.</li>
+      <li>Layout labels match the supplied profile names.</li>
+      <li>No duplicate profile was found in the fictional package.</li>
+    </ul>
+  </div>
+
+  <div class="notice">
+    <h3>Marked layout (PDF)</h3>
+    <p>In a live review, this summary is delivered together with the <strong>marked-up layout PDF</strong>: the same numbered findings circled on the layout, so your designer can go straight to each location. <span class="small">(Demo — no file is attached to this sample.)</span></p>
+    <button type="button" class="btn plain" disabled>Marked layout (PDF) — sample</button>
+  </div>
+
+  <p class="small">Second review only. A qualified truss designer must verify every finding in the design software before changing or releasing the package. This sample does not replace engineering review.</p>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">TrussVerify — Demo prototype. Sample data only; nothing is uploaded, sent, or saved.</div>
+</footer>
+
+</body>
+</html>
